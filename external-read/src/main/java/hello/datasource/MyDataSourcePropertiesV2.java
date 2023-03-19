@@ -19,6 +19,9 @@ public class MyDataSourcePropertiesV2 {
     private String password;
     private Etc etc;
 
+    /**
+     * 생성자 기반으로 생성
+     */
     public MyDataSourcePropertiesV2(String url, String username, String password, @DefaultValue Etc etc) {
         this.url = url;
         this.username = username;
@@ -32,6 +35,7 @@ public class MyDataSourcePropertiesV2 {
         private Duration timeout;
         private List<String> options;
 
+        // @DefaultValue : 해당 값을 찾을 수 없을 때 기본값 지정
         public Etc(int maxConnection, Duration timeout, @DefaultValue("DEFAULT") List<String> options) {
             this.maxConnection = maxConnection;
             this.timeout = timeout;

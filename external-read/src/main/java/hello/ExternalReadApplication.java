@@ -3,6 +3,7 @@ package hello;
 import hello.config.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.context.annotation.Import;
 
@@ -10,6 +11,7 @@ import org.springframework.context.annotation.Import;
 //@Import(MyDataSourceValueConfig.class)
 //@Import(MyDataSourceConfigV1.class)
 //@Import(MyDataSourceConfigV2.class)
+//@ConfigurationPropertiesScan({"hello"}) // EnableConfigurationProperties 없어도 component scan 처럼 사용가능
 @Import(MyDataSourceConfigV3.class)
 @SpringBootApplication(scanBasePackages = {"hello.datasource", "hello.pay"})
 public class ExternalReadApplication {
