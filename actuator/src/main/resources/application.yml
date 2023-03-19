@@ -1,0 +1,28 @@
+management:
+  info:
+    java:
+      enabled: true # java 정보
+    os:
+      enabled: true # os 정보
+  server:
+    port: 8080 # 내부망에서만 사용할 수 있게하고, 외부에는 노출하지 않는다. 9292포트를 통해서만 접근하게하거나한다.(보안)
+  endpoints:
+    web:
+      exposure:
+        include: "*" # 모든 엔드포인트를 웹에 노출 (shutdown 제외). 노출해야 실제로 기능이 동작함
+      base-path: "/actuator" # 기본 경로 설정
+  endpoint:
+    shutdown:
+      enabled: true # shutdown 활성화. 꼭 필요할 때만 쓰기. 내부망까지도 필요하면 가능
+    health:
+      #show-details: always # health 체크 시 자세한 정보
+      show-components: always # 간략하게 노출할 경우
+
+info:
+  app:
+    name: hello-actuator
+    company: yh
+
+logging:
+  level:
+    hello.controller: debug
