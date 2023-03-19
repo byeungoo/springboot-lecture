@@ -26,3 +26,8 @@ info:
 logging:
   level:
     hello.controller: debug
+
+server:
+  tomcat:
+    mbeanregistry:
+      enabled: true # 톰캣 메트릭 활성화. 유용해서 키는걸 추천!!!!
