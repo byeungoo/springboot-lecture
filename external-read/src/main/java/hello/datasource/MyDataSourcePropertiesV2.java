@@ -21,6 +21,7 @@ public class MyDataSourcePropertiesV2 {
 
     /**
      * 생성자 기반으로 생성
+     * 3.0 이전에는 @ConstructorBinding 어노테이션 선언 필요
      */
     public MyDataSourcePropertiesV2(String url, String username, String password, @DefaultValue Etc etc) {
         this.url = url;

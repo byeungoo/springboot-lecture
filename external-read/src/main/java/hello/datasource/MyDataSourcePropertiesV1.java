@@ -7,6 +7,9 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * getter/setter 방식
+ */
 @Data
 @ConfigurationProperties("my.datasource")
 public class MyDataSourcePropertiesV1 {
